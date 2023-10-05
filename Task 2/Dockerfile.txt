@@ -1,0 +1,15 @@
+FROM python:3.9.18-bookworm
+
+WORKDIR /user/src/app 
+
+COPY requirements.txt ./ 
+RUN python -m pip install -r requirements.txt 
+RUN python -m pip install numpy==1.23.1
+#RUN python -m pip install streamlit==1.27.2
+
+COPY ensemble_object_detection.py ./
+COPY sam_vit_b_01ec64.pth ./
+ENTRYPOINT ["streamlit", "run"] 
+CMD ["ensemble_object_detection.py"]
+
+EXPOSE 5555

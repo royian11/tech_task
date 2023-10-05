@@ -1,0 +1,13 @@
+numpy==1.23.5
+torch==1.13.1 
+torchvision==0.14.1 
+torchaudio==0.13.1 
+torchtext==0.14.1 
+fastai==2.7.11
+mxnet -f https://dist.mxnet.io/python/cpu
+gluoncv==0.10.5
+opencv-python==4.8.1.78
+ensemble-boxes==1.0.9
+segment-anything==1.0
+supervision==0.14.0
+streamlit==1.27.2
